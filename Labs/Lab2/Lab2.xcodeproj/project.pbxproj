@@ -18,7 +18,9 @@
 		346D257E27A74CC50005C66F /* About_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346D257D27A74CC50005C66F /* About_ViewController.swift */; };
 		346D258227A74E850005C66F /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346D258127A74E850005C66F /* DataLoader.swift */; };
 		346D258827A7523B0005C66F /* VideoGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346D258727A7523B0005C66F /* VideoGames.swift */; };
-		346D259827A768110005C66F /* genres.plist in Resources */ = {isa = PBXBuildFile; fileRef = 346D259727A768110005C66F /* genres.plist */; };
+		348FCA7127A771760058D8EC /* genres.plist in Resources */ = {isa = PBXBuildFile; fileRef = 348FCA7027A771760058D8EC /* genres.plist */; };
+		34D3C87227A782EC0062ABEE /* genresImported.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34D3C87127A782EB0062ABEE /* genresImported.plist */; };
+		34D81AF327A85BD700298B48 /* platforms.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34D81AF227A85BD700298B48 /* platforms.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +37,9 @@
 		346D257D27A74CC50005C66F /* About_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_ViewController.swift; sourceTree = "<group>"; };
 		346D258127A74E850005C66F /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		346D258727A7523B0005C66F /* VideoGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGames.swift; sourceTree = "<group>"; };
-		346D259727A768110005C66F /* genres.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = genres.plist; sourceTree = "<group>"; };
+		348FCA7027A771760058D8EC /* genres.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = genres.plist; sourceTree = "<group>"; };
+		34D3C87127A782EB0062ABEE /* genresImported.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = genresImported.plist; sourceTree = "<group>"; };
+		34D81AF227A85BD700298B48 /* platforms.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = platforms.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +72,7 @@
 		346D256327A749B70005C66F /* Lab2 */ = {
 			isa = PBXGroup;
 			children = (
-				346D259627A767E40005C66F /* Data */,
+				348FCA6B27A76F870058D8EC /* Data */,
 				346D258627A752200005C66F /* Model */,
 				346D258027A74E580005C66F /* Utility */,
 				346D257827A74C4E0005C66F /* Controllers */,
@@ -117,10 +121,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		346D259627A767E40005C66F /* Data */ = {
+		348FCA6B27A76F870058D8EC /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				346D259727A768110005C66F /* genres.plist */,
+				34D3C87127A782EB0062ABEE /* genresImported.plist */,
+				348FCA7027A771760058D8EC /* genres.plist */,
+				34D81AF227A85BD700298B48 /* platforms.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -184,9 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				346D257127A749B90005C66F /* LaunchScreen.storyboard in Resources */,
+				34D3C87227A782EC0062ABEE /* genresImported.plist in Resources */,
 				346D256E27A749B90005C66F /* Assets.xcassets in Resources */,
-				346D259827A768110005C66F /* genres.plist in Resources */,
+				348FCA7127A771760058D8EC /* genres.plist in Resources */,
 				346D256C27A749B70005C66F /* Main.storyboard in Resources */,
+				34D81AF327A85BD700298B48 /* platforms.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

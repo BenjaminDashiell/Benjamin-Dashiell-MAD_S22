@@ -8,57 +8,54 @@
 import Foundation
 
 class GenreLoader {
-    var allData = [videoGameGenre]()
+    var allData = [String]()
     
     func loadData(filename: String){
-        print(filename)
         if let pathURL = Bundle.main.url(forResource: filename, withExtension:  "plist") {
+            //print(pathURL)
             let plistdecoder = PropertyListDecoder()
             do {
                 let data = try Data(contentsOf: pathURL)
-                allData = try plistdecoder.decode([videoGameGenre].self, from: data)
+                allData = try plistdecoder.decode([String].self, from: data)
             } catch {
                 print("Unable to load Genre data")
             }
         }
-        else{
-            print("path not found")
-        }
     }
     
     func getGenres() -> [String]{
-        print("allData loaded", allData)
+        //print("allData loaded", allData)
         var genres = [String]()
         for genre in allData {
-            genres.append(genre.genre)
+            genres.append(genre)
         }
-        print("get genres array", genres)
+        //print("get genres array", genres)
         return genres
     }
 }
 
 
 class PlatformLoader {
-    var allData = [videoGamePlatform]()
-    
+    var allData = [String]()
+
     func loadData(filename: String){
         if let pathURL = Bundle.main.url(forResource: filename, withExtension:  "plist") {
             let plistdecoder = PropertyListDecoder()
             do {
                 let data = try Data(contentsOf: pathURL)
-                allData = try plistdecoder.decode([videoGamePlatform].self, from: data)
+                allData = try plistdecoder.decode([String].self, from: data)
             } catch {
                 print("Unable to load Platform data")
             }
         }
     }
-    
+
     func getPlatforms() -> [String]{
         var platforms = [String]()
         for platform in allData {
-            platforms.append(platform.platform)
+            platforms.append(platform)
         }
-        print(platforms)
+        //print(platforms)
         return platforms
     }
 }

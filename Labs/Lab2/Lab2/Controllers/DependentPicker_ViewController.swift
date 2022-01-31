@@ -24,6 +24,17 @@ class DependentPicker_ViewController: UIViewController, UIPickerViewDataSource, 
     //update. This is valid for the do-catch, but the plist data isn't in the picker
     let filename2 = "platforms"
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        videoGamePicker.delegate = self
+        videoGamePicker.dataSource = self
+        genreData.loadData(filename: filename1)
+        genres = genreData.getGenres()
+        platformData.loadData(filename: filename2)
+        platforms = platformData.getPlatforms()
+        outputLabel.text = ""
+    }
+    
     //required procs
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
@@ -50,14 +61,5 @@ class DependentPicker_ViewController: UIViewController, UIPickerViewDataSource, 
         let genreRow = pickerView.selectedRow(inComponent: genresComponent) //gets the selected row for the artist
         let platformRow = pickerView.selectedRow(inComponent: platformsComponent) //gets the selected row for the album
         outputLabel.text="You enjoy playing \(genres[genreRow]) games on \(platforms[platformRow])."
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        genreData.loadData(filename: filename1)
-        genres = genreData.getGenres()
-        //platformData.loadData(filename: filename2)
-        //platforms = platformData.getPlatforms()
-        outputLabel.text = ""
     }
 }

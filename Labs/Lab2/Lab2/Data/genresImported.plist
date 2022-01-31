@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <array>
+          <string>Real-time strategy (RTS)</string>
+    </array>
+    <array>
+          <string>Shooters (FPS and TPS)</string>
+    </array>
+    <array>
+          <string>Multiplayer online battle arena (MOBA)</string>
+    </array>
+    <array>
+          <string>Role-playing (RPG, ARPG, and More)</string>
+    </array>
+    <array>
+          <string>Simulation and sports</string>
+    </array>
+    <array>
+          <string>Puzzlers and party games</string>
+    </array>
+    <array>
+          <string>Action-adventure</string>
+    </array>
+    <array>
+          <string>Survival and horror</string>
+    </array>
+    <array>
+          <string>Platformer</string>
+    </array>
+</array>
+</plist>

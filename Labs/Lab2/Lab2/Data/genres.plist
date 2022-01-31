@@ -2,7 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>test 1</string>
-	<string>test 2</string>
+	<string>Sandbox</string>
+	<string>Real-time strategy (RTS)</string>
+	<string>Shooters (FPS and TPS)</string>
+	<string>Multiplayer online battle arena (MOBA)</string>
+	<string>Role-playing (RPG, ARPG, and More)</string>
+	<string>Simulation and sports</string>
+	<string>Puzzlers and party games</string>
+	<string>Action-adventure</string>
+	<string>Survival and horror</string>
+	<string>Platformer</string>
 </array>
 </plist>
