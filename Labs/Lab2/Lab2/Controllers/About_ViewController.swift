@@ -11,19 +11,17 @@ class About_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func openGithub(_ sender: UIButton){
+        //App is available
+        if(UIApplication.shared.canOpenURL(URL(string: "github://")!)){
+        UIApplication.shared.open(URL(string: "github://")!, options: [:], completionHandler: nil)
+        }
+        else{
+            //App is not available
+            UIApplication.shared.open(URL(string:
+            "https://github.com/BenjaminDashiell/Benjamin-Dashiell-MAD_S22")!, options: [:], completionHandler: nil)
+        }
     }
-    */
-
 }

@@ -35,8 +35,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ETD-ED-Tlk">
-                                <rect key="frame" x="47" y="262" width="320" height="372"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ETD-ED-Tlk">
+                                <rect key="frame" x="47" y="277" width="320" height="342"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A Video Game Genre &amp; Platform" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdK-57-Fpm">
                                         <rect key="frame" x="36.5" y="0.0" width="247.5" height="48"/>
@@ -48,13 +48,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ybd-Dp-hMb">
-                                        <rect key="frame" x="0.0" y="73" width="320" height="250"/>
+                                        <rect key="frame" x="0.0" y="58" width="320" height="250"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="jIc-6v-1ru"/>
                                         </constraints>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gj-fV-wae">
-                                        <rect key="frame" x="129.5" y="348" width="61.5" height="24"/>
+                                        <rect key="frame" x="129.5" y="318" width="61.5" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="Udf-xa-k83"/>
                                         </constraints>
@@ -82,19 +82,19 @@
             </objects>
             <point key="canvasLocation" x="513.04347826086962" y="-472.09821428571428"/>
         </scene>
-        <!--Color Picker-->
+        <!--Date Picker-->
         <scene sceneID="1DQ-C1-Ob4">
             <objects>
-                <viewController id="ePY-Bq-STv" customClass="ColorPicker_ViewController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ePY-Bq-STv" userLabel="Date Picker" customClass="DatePicker_ViewController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ucU-1T-lUv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uFy-6r-UuF">
-                                <rect key="frame" x="47" y="291" width="320" height="314"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uFy-6r-UuF">
+                                <rect key="frame" x="47" y="294" width="320" height="308"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A Background Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFQ-KC-qbE">
-                                        <rect key="frame" x="42.5" y="0.0" width="235" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Till Graduation (5/5/22)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFQ-KC-qbE">
+                                        <rect key="frame" x="70" y="0.0" width="180" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="23p-c3-jji"/>
                                         </constraints>
@@ -102,11 +102,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TU-T7-09H">
-                                        <rect key="frame" x="0.0" y="49" width="320" height="216"/>
-                                    </pickerView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Background Is Default." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFH-uU-YeQ">
-                                        <rect key="frame" x="42" y="290" width="236.5" height="24"/>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="d8Q-8o-VwS">
+                                        <rect key="frame" x="0.0" y="58" width="320" height="216"/>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="536482800">
+                                            <!--2018-01-01 07:00:00 +0000-->
+                                        </date>
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="946623600">
+                                            <!--2030-12-31 07:00:00 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="updateLabelWithSender:" destination="ePY-Bq-STv" eventType="valueChanged" id="SQU-EK-5m6"/>
+                                        </connections>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFH-uU-YeQ">
+                                        <rect key="frame" x="129.5" y="284" width="61.5" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="ZtW-Wy-dl2"/>
                                         </constraints>
@@ -124,7 +133,11 @@
                             <constraint firstItem="uFy-6r-UuF" firstAttribute="centerY" secondItem="ucU-1T-lUv" secondAttribute="centerY" id="WyB-PM-w10"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Color Picker" id="aiZ-6s-aMo" userLabel="ColorPicker"/>
+                    <tabBarItem key="tabBarItem" title="Date Picker" id="aiZ-6s-aMo" userLabel="ColorPicker"/>
+                    <connections>
+                        <outlet property="datePicker" destination="d8Q-8o-VwS" id="VHQ-0r-pOl"/>
+                        <outlet property="outputLabel" destination="KFH-uU-YeQ" id="Oz8-g8-She"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olZ-sR-iPZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,23 +152,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="fvF-Wl-0kC">
-                                <rect key="frame" x="146.5" y="355" width="121.5" height="186"/>
+                                <rect key="frame" x="173.5" y="386" width="67.5" height="124"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Socials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wa4-VI-vY5">
-                                        <rect key="frame" x="29.5" y="0.0" width="62.5" height="24"/>
+                                        <rect key="frame" x="2.5" y="0.0" width="62.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suc-Lh-9xV">
-                                        <rect key="frame" x="12" y="74" width="97.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="74" width="67.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3Yc-je-Mmw"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="gzy-Ue-ShF"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Github Link"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8T-C9-e49">
-                                        <rect key="frame" x="0.0" y="155" width="121.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Project Journal"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Github"/>
+                                        <connections>
+                                            <action selector="openGithub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I7y-0A-ddi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
