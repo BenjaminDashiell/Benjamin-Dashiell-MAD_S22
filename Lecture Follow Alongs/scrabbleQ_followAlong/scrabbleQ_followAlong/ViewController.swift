@@ -13,12 +13,25 @@ class ViewController: UITableViewController {
     var words = [String]()
     var data = QDataLoader()
     let wordFile = "qwordswithoutu1"
+    var searchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         data.loadData(filename: wordFile)
         words=data.getWords()
+        
+        //search results
+        let resultsController = SearchResults_TVC() //create an instance of our SearchResultsController class
+        resultsController.allWords = words //set the allwords property to our words array
+        searchController = UISearchController(searchResultsController: resultsController)
+        //initialize our search controller with the resultsController when it has search results to display
+        
+        //search bar configuration
+        searchController.searchBar.placeholder = "Enter a search term" //place holder text
+        searchController.searchBar.sizeToFit() //sets appropriate size for the search bar
+        tableView.tableHeaderView=searchController.searchBar //install the search bar as the table header
+        searchController.searchResultsUpdater = resultsController //sets the instance to update search results
     }
 
     //funcs needed for tableView

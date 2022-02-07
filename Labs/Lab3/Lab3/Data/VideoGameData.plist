@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>genre</key>
+		<string>Sandbox</string>
+		<key>games</key>
+		<array>
+			<string>Minecraft</string>
+			<string>Terraria</string>
+			<string>GTA V</string>
+			<string>Garry&apos;s Mod</string>
+			<string>Kerbal Space Program</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>Real-time strategy (RTS)</string>
+		<key>games</key>
+		<array>
+			<string>Age of Empires</string>
+			<string>Starcraft</string>
+			<string>Warcraft</string>
+			<string>Rise of Nations</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>Shooters (FPS and TPS)</string>
+		<key>games</key>
+		<array>
+			<string>Call of Duty</string>
+			<string>Battlefield</string>
+			<string>Borderlands</string>
+			<string>Destiny</string>
+			<string>Far Cry</string>
+			<string>Fallout</string>
+			<string>Rainbow Six Siege</string>
+			<string>The Division</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>Multiplayer online battle arena (MOBA)</string>
+		<key>games</key>
+		<array>
+			<string>DOTA</string>
+			<string>Smite</string>
+			<string>Vainglory</string>
+			<string>League of Legends</string>
+			<string>Heroes of the Storm</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>Role-playing Games</string>
+		<key>games</key>
+		<array>
+			<string>The Witcher</string>
+			<string>Fallout New Vegas</string>
+			<string>Final Fantasy</string>
+			<string>Dark Souls</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>Simulation and sports</string>
+		<key>games</key>
+		<array>
+			<string>The Sims</string>
+			<string>Every Cringe EA Sports Game</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>Puzzlers and party games</string>
+		<key>games</key>
+		<array>
+			<string>Mario Party</string>
+			<string>Human Fall Flat</string>
+			<string>Keep Talking and Nobody Explodes</string>
+			<string>Tetris</string>
+			<string>UNO</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>Action-adventure</string>
+		<key>games</key>
+		<array>
+			<string>God of War</string>
+			<string>Batman Arkham Series</string>
+			<string>Sekiro</string>
+			<string>Assassin&apos;s Creed</string>
+			<string>Red Dead Redemption</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>Survival and horror</string>
+		<key>games</key>
+		<array>
+			<string>Resident Evil</string>
+			<string>FNAF</string>
+			<string>Phasmophobia</string>
+			<string>Outlast</string>
+			<string>Alien Isolation</string>
+		</array>
+	</dict>
+	<dict>
+		<key>genre</key>
+		<string>Platformer</string>
+		<key>games</key>
+		<array>
+			<string>Metroid</string>
+			<string>Shovel Knight</string>
+			<string>Celeste</string>
+			<string>Sonic Mania</string>
+			<string>Hollow Knight</string>
+			<string>Spyro</string>
+			<string>Crash Bandicoot</string>
+			<string>Cuphead</string>
+		</array>
+	</dict>
+</array>
+</plist>

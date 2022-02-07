@@ -17,7 +17,7 @@ class SearchResults_TVC: UITableViewController, UISearchResultsUpdating {
         filteredWords.removeAll(keepingCapacity: true) //remove all elements, in case did a search prior
         if searchString?.isEmpty == false{
             //closure that returns true if the search string is present in a String
-            let searchFilter: (String)->Bool{ name in
+            let searchFilter: (String) -> Bool = { name in
                 //lock for the search string as a substrign of the word
                 let range = name.range(of: searchString!, options: .caseInsensitive)
                 return range != nil //returns true if the value matcehs and false if there's no match
@@ -37,23 +37,23 @@ class SearchResults_TVC: UITableViewController, UISearchResultsUpdating {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return filteredWords.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "scrabbleCell", for: indexPath)
 
         // Configure the cell...
-
+        var cellCongif = cell.defaultContentConfiguration()
+        cellCongif.text=filteredWords[indexPath.row]
+        cell.contentConfiguration=cellCongif
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
