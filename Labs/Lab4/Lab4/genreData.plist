@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>genreName</key>
+		<string>Action-adventure</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Action-adventure_game</string>
+	</dict>
+	<dict>
+		<key>genreName</key>
+		<string>Gacha</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Gacha_game</string>
+	</dict>
+	<dict>
+		<key>genreName</key>
+		<string>MOBA</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Multiplayer_online_battle_arena</string>
+	</dict>
+	<dict>
+		<key>genreName</key>
+		<string>Party</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Party_games#Video_games</string>
+	</dict>
+	<dict>
+		<key>genreName</key>
+		<string>Platformer</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Platform_game</string>
+	</dict>
+	<dict>
+		<key>genreName</key>
+		<string>Puzzle</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Puzzle_game</string>
+	</dict>
+	<dict>
+		<key>genreName</key>
+		<string>Real-time strategy</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Real-time_strategy</string>
+	</dict>
+	<dict>
+		<key>genreName</key>
+		<string>Sandbox</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Sandbox_game</string>
+	</dict>
+	<dict>
+		<key>genreName</key>
+		<string>Shooter</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Shooter_game</string>
+	</dict>
+	<dict>
+		<key>genreName</key>
+		<string>Simulation</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Simulation_video_game</string>
+	</dict>
+	<dict>
+		<key>genreName</key>
+		<string>Survival and horror</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Survival_horror</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xm5-sv-BOf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Genres-->
+        <scene sceneID="m5T-w4-qWs">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="839-ut-egc" customClass="SideViewController" customModule="Lab4" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="hSo-ah-tyO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sideViewCell" id="CJ4-CC-3e1">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CJ4-CC-3e1" id="7p1-cl-Gdf">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="n4g-sg-QEf" kind="show" identifier="detailSegue" id="MCo-ze-J84"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="839-ut-egc" id="0PN-qf-lMs"/>
+                            <outlet property="delegate" destination="839-ut-egc" id="LAy-HW-Nb7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Game Genres" id="Cg7-OF-rvs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nog-T3-FJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="-178"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uaK-ze-vqd">
+            <objects>
+                <navigationController id="n4g-sg-QEf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="62I-57-ZP3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ph7-NV-BUB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9wm-cq-VoT" kind="relationship" relationship="rootViewController" id="eQR-Ee-f0J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMp-fK-gEt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184" y="550"/>
+        </scene>
+        <!--Webpage View Controller-->
+        <scene sceneID="aKR-yR-ex2">
+            <objects>
+                <viewController id="9wm-cq-VoT" customClass="WebpageViewController" customModule="Lab4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CW9-Sp-OIy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgC-wu-hzQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fhp-jZ-vb4">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ej4-Q3-zKf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fhp-jZ-vb4" firstAttribute="centerX" secondItem="CW9-Sp-OIy" secondAttribute="centerX" id="0Lu-Gn-Fzs"/>
+                            <constraint firstItem="VgC-wu-hzQ" firstAttribute="top" secondItem="Ej4-Q3-zKf" secondAttribute="top" id="A4g-5x-AuA"/>
+                            <constraint firstItem="Ej4-Q3-zKf" firstAttribute="trailing" secondItem="VgC-wu-hzQ" secondAttribute="trailing" id="eU1-SY-HKW"/>
+                            <constraint firstItem="fhp-jZ-vb4" firstAttribute="centerY" secondItem="CW9-Sp-OIy" secondAttribute="centerY" id="muE-Af-NiR"/>
+                            <constraint firstItem="Ej4-Q3-zKf" firstAttribute="bottom" secondItem="VgC-wu-hzQ" secondAttribute="bottom" id="o8G-so-KcC"/>
+                            <constraint firstItem="VgC-wu-hzQ" firstAttribute="leading" secondItem="Ej4-Q3-zKf" secondAttribute="leading" id="tRD-cY-i2h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4D8-qO-qNN"/>
+                    <connections>
+                        <outlet property="webActivityIndicator" destination="fhp-jZ-vb4" id="jf9-96-Qxq"/>
+                        <outlet property="webView" destination="VgC-wu-hzQ" id="GwG-uo-hhk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wn8-Ob-yPt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="550"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="otc-5L-EXl">
+            <objects>
+                <navigationController id="w2O-zG-DhS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fDg-L3-x4g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="839-ut-egc" kind="relationship" relationship="rootViewController" id="pKm-QH-iWQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fi1-2y-X1I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-186" y="-178"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="ieN-KY-rNA">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" id="Xm5-sv-BOf" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="w2O-zG-DhS" kind="relationship" relationship="masterViewController" id="t5e-W5-jbh"/>
+                        <segue destination="n4g-sg-QEf" kind="relationship" relationship="detailViewController" id="CEQ-rW-yGR"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXV-5p-brg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1075" y="124"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MCo-ze-J84"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
