@@ -18,17 +18,20 @@ class WebpageViewController: UIViewController, WKNavigationDelegate {
         webView.navigationDelegate = self
         loadWebPage("https://en.wikipedia.org/wiki/List_of_video_game_genres") //default page
     }
+    
+    override func viewWillAppear(_ animated: Bool){
+        if let url = webpage {
+            //print("debug - url from segue: ", url)
+            loadWebPage(url)
+        }else{
+            print("Webpage failed to load")
+        }
+    }
 
     func loadWebPage(_ urlString: String){
         let url = URL(string: urlString)
         let request = URLRequest(url: url!)
         webView.load(request)
-    }
-    
-    override func viewWillAppear(_ animated: Bool){
-        if let url = webpage {
-            loadWebPage(url)
-        }
     }
     
     //when a web page begins to load

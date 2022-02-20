@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  SideTableViewController.swift
 //  Lab4
 //
-//  Created by BenD on 2/19/22.
+//  Created by BenD on 2/20/22.
 //
 
 import UIKit
 
-class SideViewController: UITableViewController {
+class SideTableViewController: UITableViewController {
     var genres = [String]()
     var genreData = DataLoader()
     let dataFile = "genreData"
@@ -26,7 +26,6 @@ class SideViewController: UITableViewController {
         return genres.count
     }
 
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sideViewCell", for: indexPath)
         var cellConfig = cell.defaultContentConfiguration()
@@ -37,14 +36,18 @@ class SideViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailSegue" {
+            //print("prepare segue was called")
             if let indexPath = self.tableView.indexPathForSelectedRow {
+                //print("inside let statement of segue")
                 let genreURL = genreData.getURL(index: indexPath.row)
                 let genreName = genres[indexPath.row]
                 let webdetailVC = (segue.destination as! UINavigationController).topViewController as! WebpageViewController
+                print("genreURL: ",genreURL)
+                print("genreName: ",genreName)
+                print("webdetailVC: ",webdetailVC)
                 webdetailVC.webpage = genreURL
                 webdetailVC.title = genreName
             }
         }
     }
 }
-

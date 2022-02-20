@@ -12,14 +12,11 @@ class DataLoader{
     
     func loadData(filename: String){
         if let pathURL = Bundle.main.url(forResource: filename, withExtension: "plist"){
-            //creates a property list decoder object
             let plistdecoder = PropertyListDecoder()
             do {
                 let data = try Data(contentsOf: pathURL)
-                //decodes the property list
                 allData = try plistdecoder.decode([gameGenres].self, from: data)
             } catch {
-                // handle error
                 print(error)
             }
         }
