@@ -23,9 +23,10 @@ class WebpageViewController: UIViewController, WKNavigationDelegate {
         if let url = webpage {
             //print("debug - url from segue: ", url)
             loadWebPage(url)
-        }else{
-            print("Webpage failed to load")
         }
+        //else{
+            //print("Webpage failed to load")
+        //}
     }
 
     func loadWebPage(_ urlString: String){

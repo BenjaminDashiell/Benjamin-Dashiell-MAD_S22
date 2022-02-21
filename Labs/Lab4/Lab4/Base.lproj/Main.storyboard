@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="n4g-sg-QEf" kind="show" identifier="detailSegue" id="MCo-ze-J84"/>
+                                    <segue destination="n4g-sg-QEf" kind="showDetail" identifier="detailSegue" id="d8T-bH-WZu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -129,7 +129,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CEQ-rW-yGR"/>
+        <segue reference="d8T-bH-WZu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

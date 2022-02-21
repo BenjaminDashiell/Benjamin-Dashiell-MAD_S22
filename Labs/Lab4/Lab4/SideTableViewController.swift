@@ -42,9 +42,9 @@ class SideTableViewController: UITableViewController {
                 let genreURL = genreData.getURL(index: indexPath.row)
                 let genreName = genres[indexPath.row]
                 let webdetailVC = (segue.destination as! UINavigationController).topViewController as! WebpageViewController
-                print("genreURL: ",genreURL)
-                print("genreName: ",genreName)
-                print("webdetailVC: ",webdetailVC)
+                //print("genreURL: ",genreURL)
+                //print("genreName: ",genreName)
+                //print("webdetailVC: ",webdetailVC)
                 webdetailVC.webpage = genreURL
                 webdetailVC.title = genreName
             }
