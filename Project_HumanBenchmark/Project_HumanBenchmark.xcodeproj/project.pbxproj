@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34AF9BC927E144E0009B6E92 /* VerbalMemory_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AF9BC827E144E0009B6E92 /* VerbalMemory_ViewController.swift */; };
+		34AF9BCC27E1461B009B6E92 /* SequenceMemory_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AF9BCB27E1461B009B6E92 /* SequenceMemory_ViewController.swift */; };
+		34AF9BCF27E1468F009B6E92 /* Dashboard_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AF9BCE27E1468F009B6E92 /* Dashboard_ViewController.swift */; };
+		34AF9BD127E14D56009B6E92 /* Wordbank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AF9BD027E14D56009B6E92 /* Wordbank.swift */; };
+		34AF9BD327E14D7F009B6E92 /* WordbankDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AF9BD227E14D7F009B6E92 /* WordbankDataHandler.swift */; };
+		34AF9BD527E14D93009B6E92 /* Words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34AF9BD427E14D93009B6E92 /* Words.plist */; };
 		34E1E4BE27BD740500CA52E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E1E4BD27BD740500CA52E8 /* AppDelegate.swift */; };
 		34E1E4C027BD740500CA52E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E1E4BF27BD740500CA52E8 /* SceneDelegate.swift */; };
 		34E1E4C227BD740500CA52E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E1E4C127BD740500CA52E8 /* ViewController.swift */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34AF9BC827E144E0009B6E92 /* VerbalMemory_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemory_ViewController.swift; sourceTree = "<group>"; };
+		34AF9BCB27E1461B009B6E92 /* SequenceMemory_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceMemory_ViewController.swift; sourceTree = "<group>"; };
+		34AF9BCE27E1468F009B6E92 /* Dashboard_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard_ViewController.swift; sourceTree = "<group>"; };
+		34AF9BD027E14D56009B6E92 /* Wordbank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordbank.swift; sourceTree = "<group>"; };
+		34AF9BD227E14D7F009B6E92 /* WordbankDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordbankDataHandler.swift; sourceTree = "<group>"; };
+		34AF9BD427E14D93009B6E92 /* Words.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Words.plist; sourceTree = "<group>"; };
 		34E1E4BA27BD740500CA52E8 /* Project_HumanBenchmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_HumanBenchmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E1E4BD27BD740500CA52E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34E1E4BF27BD740500CA52E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34AF9BC727E144B6009B6E92 /* VerbalMemory */ = {
+			isa = PBXGroup;
+			children = (
+				34AF9BC827E144E0009B6E92 /* VerbalMemory_ViewController.swift */,
+				34AF9BD027E14D56009B6E92 /* Wordbank.swift */,
+				34AF9BD227E14D7F009B6E92 /* WordbankDataHandler.swift */,
+				34AF9BD427E14D93009B6E92 /* Words.plist */,
+			);
+			path = VerbalMemory;
+			sourceTree = "<group>";
+		};
+		34AF9BCA27E14608009B6E92 /* SequenceMemory */ = {
+			isa = PBXGroup;
+			children = (
+				34AF9BCB27E1461B009B6E92 /* SequenceMemory_ViewController.swift */,
+			);
+			path = SequenceMemory;
+			sourceTree = "<group>";
+		};
+		34AF9BCD27E14678009B6E92 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				34AF9BCE27E1468F009B6E92 /* Dashboard_ViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		34E1E4B127BD740500CA52E8 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +97,9 @@
 		34E1E4BC27BD740500CA52E8 /* Project_HumanBenchmark */ = {
 			isa = PBXGroup;
 			children = (
+				34AF9BCD27E14678009B6E92 /* Dashboard */,
+				34AF9BCA27E14608009B6E92 /* SequenceMemory */,
+				34AF9BC727E144B6009B6E92 /* VerbalMemory */,
 				34E1E4BD27BD740500CA52E8 /* AppDelegate.swift */,
 				34E1E4BF27BD740500CA52E8 /* SceneDelegate.swift */,
 				34E1E4C127BD740500CA52E8 /* ViewController.swift */,
@@ -128,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34AF9BD527E14D93009B6E92 /* Words.plist in Resources */,
 				34E1E4CA27BD740800CA52E8 /* LaunchScreen.storyboard in Resources */,
 				34E1E4C727BD740800CA52E8 /* Assets.xcassets in Resources */,
 				34E1E4C527BD740500CA52E8 /* Main.storyboard in Resources */,
@@ -141,9 +184,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34AF9BD327E14D7F009B6E92 /* WordbankDataHandler.swift in Sources */,
 				34E1E4C227BD740500CA52E8 /* ViewController.swift in Sources */,
+				34AF9BD127E14D56009B6E92 /* Wordbank.swift in Sources */,
+				34AF9BC927E144E0009B6E92 /* VerbalMemory_ViewController.swift in Sources */,
+				34AF9BCC27E1461B009B6E92 /* SequenceMemory_ViewController.swift in Sources */,
 				34E1E4BE27BD740500CA52E8 /* AppDelegate.swift in Sources */,
 				34E1E4C027BD740500CA52E8 /* SceneDelegate.swift in Sources */,
+				34AF9BCF27E1468F009B6E92 /* Dashboard_ViewController.swift in Sources */,
 				34E1E4D227BD77DF00CA52E8 /* Timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
