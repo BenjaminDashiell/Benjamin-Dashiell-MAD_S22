@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Lab8</string>
+    <string name="AppTitle">Your Random Pokemon Team Is...</string>
+    <string name="randomize">Randomize</string>
+    <string name="pokemonName">Filler Name</string>
+    <string name="pokemonType">Filler Type</string>
+    <string name="pokemonHP">HP: 0</string>
+    <string name="pokemonATK">ATK: 0</string>
+    <string name="pokemonDEF">DEF: 0</string>
+    <string name="pokemonSPECATK">SPECIAL ATK: 0</string>
+    <string name="pokemonSPECDEF">SPECIAL DEF: 0</string>
+    <string name="pokemonSPEED">SPEED: 0</string>
+</resources>

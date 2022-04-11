@@ -24,11 +24,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-    //private var animeList = SampleData.animeList
-    private var animeList = ArrayList<anime>()
+    var animeList = SampleData.animeList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.i("data", "in oncreate")
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -52,9 +52,8 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        if (savedInstanceState == null){
-            animeList = SampleData.animeList
-        }
+        //animeList = SampleData.animeList
+
         setupRecyclerView()
     }
 
