@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34751BB4281064C9005E68D8 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34751BB3281064C9005E68D8 /* Score.swift */; };
+		34751BB628106AC6005E68D8 /* Rules_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34751BB528106AC6005E68D8 /* Rules_ViewController.swift */; };
+		34751BBA28108744005E68D8 /* Reaction_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34751BB928108744005E68D8 /* Reaction_ViewController.swift */; };
+		34751BBC2810874F005E68D8 /* Number_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34751BBB2810874F005E68D8 /* Number_ViewController.swift */; };
 		34AF9BC927E144E0009B6E92 /* VerbalMemory_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AF9BC827E144E0009B6E92 /* VerbalMemory_ViewController.swift */; };
 		34AF9BCC27E1461B009B6E92 /* SequenceMemory_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AF9BCB27E1461B009B6E92 /* SequenceMemory_ViewController.swift */; };
 		34AF9BCF27E1468F009B6E92 /* Dashboard_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AF9BCE27E1468F009B6E92 /* Dashboard_ViewController.swift */; };
@@ -15,14 +19,17 @@
 		34AF9BD527E14D93009B6E92 /* Words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34AF9BD427E14D93009B6E92 /* Words.plist */; };
 		34E1E4BE27BD740500CA52E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E1E4BD27BD740500CA52E8 /* AppDelegate.swift */; };
 		34E1E4C027BD740500CA52E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E1E4BF27BD740500CA52E8 /* SceneDelegate.swift */; };
-		34E1E4C227BD740500CA52E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E1E4C127BD740500CA52E8 /* ViewController.swift */; };
+		34E1E4C227BD740500CA52E8 /* timerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E1E4C127BD740500CA52E8 /* timerClass.swift */; };
 		34E1E4C527BD740500CA52E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34E1E4C327BD740500CA52E8 /* Main.storyboard */; };
 		34E1E4C727BD740800CA52E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34E1E4C627BD740800CA52E8 /* Assets.xcassets */; };
 		34E1E4CA27BD740800CA52E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34E1E4C827BD740800CA52E8 /* LaunchScreen.storyboard */; };
-		34E1E4D227BD77DF00CA52E8 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E1E4D127BD77DF00CA52E8 /* Timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34751BB3281064C9005E68D8 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		34751BB528106AC6005E68D8 /* Rules_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules_ViewController.swift; sourceTree = "<group>"; };
+		34751BB928108744005E68D8 /* Reaction_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction_ViewController.swift; sourceTree = "<group>"; };
+		34751BBB2810874F005E68D8 /* Number_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number_ViewController.swift; sourceTree = "<group>"; };
 		34AF9BC827E144E0009B6E92 /* VerbalMemory_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemory_ViewController.swift; sourceTree = "<group>"; };
 		34AF9BCB27E1461B009B6E92 /* SequenceMemory_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceMemory_ViewController.swift; sourceTree = "<group>"; };
 		34AF9BCE27E1468F009B6E92 /* Dashboard_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard_ViewController.swift; sourceTree = "<group>"; };
@@ -32,12 +39,11 @@
 		34E1E4BA27BD740500CA52E8 /* Project_HumanBenchmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_HumanBenchmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E1E4BD27BD740500CA52E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34E1E4BF27BD740500CA52E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		34E1E4C127BD740500CA52E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34E1E4C127BD740500CA52E8 /* timerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerClass.swift; sourceTree = "<group>"; };
 		34E1E4C427BD740500CA52E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34E1E4C627BD740800CA52E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34E1E4C927BD740800CA52E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34E1E4CB27BD740800CA52E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34E1E4D127BD77DF00CA52E8 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34751BB2281064AF005E68D8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				34751BB528106AC6005E68D8 /* Rules_ViewController.swift */,
+				34751BB3281064C9005E68D8 /* Score.swift */,
+				34E1E4C127BD740500CA52E8 /* timerClass.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		34751BB728108703005E68D8 /* Reaction */ = {
+			isa = PBXGroup;
+			children = (
+				34751BB928108744005E68D8 /* Reaction_ViewController.swift */,
+			);
+			path = Reaction;
+			sourceTree = "<group>";
+		};
+		34751BB82810870C005E68D8 /* NumberMemory */ = {
+			isa = PBXGroup;
+			children = (
+				34751BBB2810874F005E68D8 /* Number_ViewController.swift */,
+			);
+			path = NumberMemory;
+			sourceTree = "<group>";
+		};
 		34AF9BC727E144B6009B6E92 /* VerbalMemory */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,13 +129,14 @@
 		34E1E4BC27BD740500CA52E8 /* Project_HumanBenchmark */ = {
 			isa = PBXGroup;
 			children = (
+				34751BB2281064AF005E68D8 /* Util */,
+				34751BB82810870C005E68D8 /* NumberMemory */,
+				34751BB728108703005E68D8 /* Reaction */,
 				34AF9BCD27E14678009B6E92 /* Dashboard */,
 				34AF9BCA27E14608009B6E92 /* SequenceMemory */,
 				34AF9BC727E144B6009B6E92 /* VerbalMemory */,
 				34E1E4BD27BD740500CA52E8 /* AppDelegate.swift */,
 				34E1E4BF27BD740500CA52E8 /* SceneDelegate.swift */,
-				34E1E4C127BD740500CA52E8 /* ViewController.swift */,
-				34E1E4D127BD77DF00CA52E8 /* Timer.swift */,
 				34E1E4C327BD740500CA52E8 /* Main.storyboard */,
 				34E1E4C627BD740800CA52E8 /* Assets.xcassets */,
 				34E1E4C827BD740800CA52E8 /* LaunchScreen.storyboard */,
@@ -185,14 +218,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				34AF9BD327E14D7F009B6E92 /* WordbankDataHandler.swift in Sources */,
-				34E1E4C227BD740500CA52E8 /* ViewController.swift in Sources */,
+				34E1E4C227BD740500CA52E8 /* timerClass.swift in Sources */,
 				34AF9BD127E14D56009B6E92 /* Wordbank.swift in Sources */,
+				34751BBA28108744005E68D8 /* Reaction_ViewController.swift in Sources */,
 				34AF9BC927E144E0009B6E92 /* VerbalMemory_ViewController.swift in Sources */,
+				34751BB4281064C9005E68D8 /* Score.swift in Sources */,
 				34AF9BCC27E1461B009B6E92 /* SequenceMemory_ViewController.swift in Sources */,
 				34E1E4BE27BD740500CA52E8 /* AppDelegate.swift in Sources */,
 				34E1E4C027BD740500CA52E8 /* SceneDelegate.swift in Sources */,
+				34751BBC2810874F005E68D8 /* Number_ViewController.swift in Sources */,
 				34AF9BCF27E1468F009B6E92 /* Dashboard_ViewController.swift in Sources */,
-				34E1E4D227BD77DF00CA52E8 /* Timer.swift in Sources */,
+				34751BB628106AC6005E68D8 /* Rules_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +382,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -373,6 +410,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
