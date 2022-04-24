@@ -659,14 +659,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Mub-Lk-f28">
-                                <rect key="frame" x="75.5" y="113" width="263.5" height="443.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Mub-Lk-f28">
+                                <rect key="frame" x="82" y="113" width="250" height="383.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VEP-Ml-7Gx">
-                                        <rect key="frame" x="0.0" y="0.0" width="263.5" height="164.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="164.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LHR-gq-Zpv">
-                                                <rect key="frame" x="43" y="0.0" width="177.5" height="82"/>
+                                                <rect key="frame" x="36.5" y="0.0" width="177.5" height="82"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your new number is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhY-xS-JF2">
                                                         <rect key="frame" x="0.0" y="0.0" width="177.5" height="24"/>
@@ -683,7 +683,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zKE-P0-n88">
-                                                <rect key="frame" x="98.5" y="97" width="66.5" height="67.5"/>
+                                                <rect key="frame" x="92" y="97" width="66.5" height="67.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8ja-hS-Ubd">
                                                         <rect key="frame" x="14.5" y="0.0" width="37.5" height="21.5"/>
@@ -704,42 +704,52 @@
                                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="reveal" destination="X6q-0o-VIA" eventType="touchUpInside" id="rpE-fN-yG1"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xE1-gK-rra">
-                                        <rect key="frame" x="0.0" y="224.5" width="263.5" height="135"/>
+                                        <rect key="frame" x="0.0" y="194.5" width="250" height="135"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What was the number shown?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQS-ci-Ovy">
-                                                <rect key="frame" x="0.0" y="0.0" width="263.5" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuj-aQ-PhR">
-                                                <rect key="frame" x="31.5" y="39" width="200" height="50"/>
+                                                <rect key="frame" x="25" y="39" width="200" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="9TJ-Hg-TB6"/>
                                                     <constraint firstAttribute="height" constant="50" id="NUI-ih-NEW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdF-gb-1Qj">
-                                                <rect key="frame" x="96.5" y="104" width="70" height="31"/>
+                                                <rect key="frame" x="90" y="104" width="70" height="31"/>
                                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Submit">
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="submit" destination="X6q-0o-VIA" eventType="touchUpInside" id="AtA-H1-lgz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyM-ht-Zdn">
-                                        <rect key="frame" x="0.0" y="419.5" width="263.5" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback:" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyM-ht-Zdn">
+                                        <rect key="frame" x="0.0" y="359.5" width="250" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="XQc-UA-I7h"/>
+                                            <constraint firstAttribute="width" constant="250" id="rPQ-0Z-pXc"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -755,6 +765,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Number Memory" id="dm6-1y-Ncm"/>
+                    <connections>
+                        <outlet property="feedbackText" destination="UyM-ht-Zdn" id="aq3-1f-t5W"/>
+                        <outlet property="memorizeNumber" destination="zGx-uF-liy" id="8ed-wE-9In"/>
+                        <outlet property="revealNumber" destination="xI7-hY-630" id="Skh-FR-27v"/>
+                        <outlet property="submitAnswer" destination="GdF-gb-1Qj" id="3e6-tv-JF1"/>
+                        <outlet property="timer" destination="lVH-cS-znZ" id="Wha-Ey-a0T"/>
+                        <outlet property="userInput" destination="uuj-aQ-PhR" id="8Ub-3v-eRR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enj-No-8go" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -116,17 +116,20 @@ class Reaction_ViewController: UIViewController {
         switch (currentState){
             case .wait:
                 reactionView.backgroundColor = UIColor.red
+                icon.image = UIImage(named: "dots")
                 mainTextLabel.text = "Wait for Green!"
                 feedbackTextLabel.text = ""
                 break
             case .startTimer:
                 timerInstance.ReactionTimer()
                 reactionView.backgroundColor = UIColor.green
+                icon.image = UIImage(named: "dots")
                 mainTextLabel.text = "Tap!"
                 feedbackTextLabel.text = ""
                 break
             case .invalidTap:
                 reactionView.backgroundColor = UIColor(red: 255/255, green: 236/255, blue: 84/255, alpha: 1.0)
+                icon.image = UIImage(named: "tooSoon")
                 mainTextLabel.text = "Too Soon!"
                 feedbackTextLabel.text = "Tap to retry"
                 break
@@ -135,11 +138,13 @@ class Reaction_ViewController: UIViewController {
                 let ms = timerInstance.getMSTime()
                 totalMS += ms
                 reactionView.backgroundColor = UIColor(red: 118/255, green: 214/255, blue: 255/255, alpha: 1.0)
+                icon.image = UIImage(named: "clock")
                 mainTextLabel.text = "\(ms) millseconds"
                 feedbackTextLabel.text = "Tap to continue"
                 break
             case .end:
             reactionView.backgroundColor = UIColor(red: 118/255, green: 214/255, blue: 255/255, alpha: 1.0)
+                icon.image = UIImage(named: "clock")
                 mainTextLabel.text = "Test Has Ended!"
                 feedbackTextLabel.text = ""
                 break
