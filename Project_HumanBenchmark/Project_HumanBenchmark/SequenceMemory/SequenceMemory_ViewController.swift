@@ -7,11 +7,20 @@
 
 import UIKit
 
+enum buttonState{
+    case displayOnly //not allow button inputs
+    case active //allow button inputs
+}
+
 class SequenceMemory_ViewController: UIViewController {
     // MARK: Setup (Variables/Outlets)
     var level = 1
     var pattern = [Int]()
     var current_index = 0
+    var currentButtonState: buttonState = .displayOnly
+    var buttonTintToChange: UIButton?
+    
+    let accessScores = Score.scoreInstance
     
     @IBOutlet weak var levelCounter: UILabel!
     @IBOutlet weak var buttonOne: UIButton!
@@ -26,72 +35,110 @@ class SequenceMemory_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initSequenceGame()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //After viewDidLoad
+        buttonEnabled(false)
+        addToPattern()
+    }
+    
+    // MARK: Running Mini-game
+    private func initSequenceGame(){
         level = 1
         pattern.removeAll()
         current_index = 0
         levelCounter.text = "Level: \(level)"
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        //After viewDidLoad
-        playSequence()
-    }
+        currentButtonState = .displayOnly
+        buttonOne.backgroundColor = .systemBlue
+        buttonTwo.backgroundColor = .systemBlue
+        buttonThree.backgroundColor = .systemBlue
+        buttonFour.backgroundColor = .systemBlue
+        buttonFive.backgroundColor = .systemBlue
+        buttonSix.backgroundColor = .systemBlue
+        buttonSeven.backgroundColor = .systemBlue
+        buttonEight.backgroundColor = .systemBlue
+        buttonNine.backgroundColor = .systemBlue
         
-    // MARK: Running Mini-game
-    private func playSequence(){
-        //disable buttons and prevent taking user input
-        buttonState(false)
-        
-        //get new index for the pattern
+    }
+    
+    private func addToPattern(){
         let newIndex = randomIndex()
         pattern.append(newIndex)
-        
-        //delay animation for 1.5 sec
-        sleep(UInt32(1.5))
-        print("For testing: the pattern is ")
-        for ind in self.pattern{
-            print(ind)
-            let buttonTintToChange = buttonFromIndexID(1) //for testing
-            //let buttonTintToChange = buttonFromIndexID(ind)
-            print("color will change to white")
-            buttonTintToChange.setTitleColor(UIColor.white, for: UIControl.State.normal) //I'm trying to figure out how to change the color of a button that isn't pressed. This is only seen when the button is pressed
-            sleep(UInt32(3.0))
-            //delay re-enable for 1.5 sec
-            print("color will change to blue")
-            buttonTintToChange.backgroundColor = .systemBlue
-        }
-        
-        //delay re-enable for 1.5 sec
-        sleep(UInt32(4.5))
-        //re-enable buttons and allow user input
-        buttonState(true)
+        recurPlaySequence(current_index)
     }
-        
-    @IBAction func userSelection(_ sender: UIButton) {
-        let tagID = sender.tag
-        print("Tag: ", tagID)
-        print("Compare", pattern[current_index])
-        if tagID == pattern[current_index]{
-            //print("User has selected the right button")
-            if current_index != pattern.count-1{
-                current_index += 1
-            }else{
-                level += 1
-                levelCounter.text = "Level: \(level)"
-                current_index = 0
-                //print("New Sequence Starting")
-                playSequence()
-            }
+    
+    private func recurPlaySequence(_ ind: Int){
+        print("sequence amount: ", pattern.count)
+        print("current index:", ind)
+        guard ind < pattern.count else{
+            currentButtonState = .active
+            buttonEnabled(true)
+            current_index = 0 //reset for userSelection
+            return
         }
-        else{
-            print("The Game Has Ended. Your score was \(level)")
-            //disable buttons
-            buttonState(false)
-            //game ends, send score to next vc
+        
+        //If error was not found, which is accessing an index outside an array, show the pattern and recursive call
+        buttonTintToChange = buttonFromIndexID(pattern[ind])
+        print("color will change to white")
+        buttonTintToChange!.backgroundColor = .white
+        
+        //change
+        let dispatchAfter = DispatchTimeInterval.seconds(2) //2 secs before changing the color of the current
+        DispatchQueue.main.asyncAfter(deadline: .now() + dispatchAfter){
+            print("color will change to blue")
+            self.buttonTintToChange!.backgroundColor = .systemBlue
+            print("current_index in Dispatch", self.current_index)
+            self.current_index+=1
+            self.recurPlaySequence(self.current_index)
+        }
+    }
+    
+    @IBAction func userSelection(_ sender: UIButton) {
+        //only allow userSelection code to run if in .active state
+        if(currentButtonState == .active){
+            let tagID = sender.tag
+            print("Tag: ", tagID)
+            print("Compare", pattern[current_index])
+            if tagID == pattern[current_index]{
+                //print("User has selected the right button")
+                if current_index != pattern.count-1{
+                    current_index += 1
+                }else{
+                    level += 1
+                    levelCounter.text = "Level: \(level)"
+
+                    current_index = 0
+                    currentButtonState = .displayOnly
+                    buttonEnabled(false)
+                    addToPattern()
+                }
+            }
+            else{
+                print("The Game Has Ended. Your score was \(level)")
+                buttonEnabled(false)
+                //game ends, send score to next vc
+                accessScores.setSequenceScore(level)
+                
+                let addalert = UIAlertController(title: "Game Over", message: "Your score was \(level) digits memorized. Would you like to play again?", preferredStyle: .alert)
+                
+                let replayAction = UIAlertAction(title: "Yes", style: .default, handler: {(UIAlertAction)in
+                    self.initSequenceGame()
+                    self.addToPattern()
+                })
+                addalert.addAction(replayAction)
+                
+                let noReplayAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+                addalert.addAction(noReplayAction)
+                
+                present(addalert, animated: true, completion: nil)
+            }
         }
     }
     
     // MARK: Helper Functions
-    private func buttonState(_ enabledState: Bool){
+    private func buttonEnabled(_ enabledState: Bool){
         buttonOne.isEnabled = enabledState
         buttonTwo.isEnabled = enabledState
         buttonThree.isEnabled = enabledState

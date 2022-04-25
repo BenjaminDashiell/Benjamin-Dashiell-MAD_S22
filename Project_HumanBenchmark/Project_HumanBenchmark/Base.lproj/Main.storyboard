@@ -504,9 +504,12 @@
                                                             <constraint firstAttribute="width" constant="100" id="Okc-el-iw3"/>
                                                             <constraint firstAttribute="height" constant="100" id="d0H-d3-YMu"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled"/>
+                                                        <buttonConfiguration key="configuration" style="filled">
+                                                            <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
                                                         <connections>
                                                             <action selector="userSelection:" destination="n21-dB-m4T" eventType="touchUpInside" id="kz5-c2-pye"/>
                                                         </connections>
@@ -517,6 +520,7 @@
                                                             <constraint firstAttribute="height" constant="100" id="CU5-S0-rrZ"/>
                                                             <constraint firstAttribute="width" constant="100" id="xZp-RB-g3W"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled"/>
                                                         <connections>
@@ -529,6 +533,7 @@
                                                             <constraint firstAttribute="height" constant="100" id="E7Y-9H-hdH"/>
                                                             <constraint firstAttribute="width" constant="100" id="NYd-Kg-55I"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled"/>
                                                         <connections>
@@ -546,6 +551,7 @@
                                                             <constraint firstAttribute="width" constant="100" id="lZO-Nh-VoM"/>
                                                             <constraint firstAttribute="height" constant="100" id="uaX-Nv-nIs"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled"/>
                                                         <connections>
@@ -558,6 +564,7 @@
                                                             <constraint firstAttribute="width" constant="100" id="1wO-Fj-lcS"/>
                                                             <constraint firstAttribute="height" constant="100" id="knS-R1-Y9G"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled"/>
                                                         <connections>
@@ -570,6 +577,7 @@
                                                             <constraint firstAttribute="height" constant="100" id="APN-on-bOb"/>
                                                             <constraint firstAttribute="width" constant="100" id="tyW-ge-061"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled"/>
                                                         <connections>
@@ -587,10 +595,9 @@
                                                             <constraint firstAttribute="height" constant="100" id="Pcs-d3-KvW"/>
                                                             <constraint firstAttribute="width" constant="100" id="kmN-hK-AOF"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled">
-                                                            <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
-                                                        </buttonConfiguration>
+                                                        <buttonConfiguration key="configuration" style="filled"/>
                                                         <connections>
                                                             <action selector="userSelection:" destination="n21-dB-m4T" eventType="touchUpInside" id="gWC-Ew-E8M"/>
                                                         </connections>
@@ -601,6 +608,7 @@
                                                             <constraint firstAttribute="width" constant="100" id="J8i-eT-bId"/>
                                                             <constraint firstAttribute="height" constant="100" id="wRT-fd-p8l"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled"/>
                                                         <connections>
@@ -613,6 +621,7 @@
                                                             <constraint firstAttribute="width" constant="100" id="a3D-ej-1Sd"/>
                                                             <constraint firstAttribute="height" constant="100" id="g7d-Co-laN"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled"/>
                                                         <connections>
@@ -787,9 +796,6 @@
         <image name="number.circle" catalog="system" width="128" height="121"/>
         <image name="square.grid.3x3.topleft.filled" catalog="system" width="128" height="112"/>
         <image name="timer" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
