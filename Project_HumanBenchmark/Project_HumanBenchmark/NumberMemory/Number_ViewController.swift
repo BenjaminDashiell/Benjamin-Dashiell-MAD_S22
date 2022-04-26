@@ -118,7 +118,12 @@ class Number_ViewController: UIViewController, UITextFieldDelegate {
                 })
                 addalert.addAction(replayAction)
                 
-                let noReplayAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+                let noReplayAction = UIAlertAction(title: "No", style: .cancel, handler: {(UIAlertAction)in
+                    self.revealNumber.isEnabled=false
+                    self.submitAnswer.isEnabled=false
+                    self.userInput.isUserInteractionEnabled=false
+                    self.userInput.text = ""
+                })
                 addalert.addAction(noReplayAction)
                 
                 present(addalert, animated: true, completion: nil)

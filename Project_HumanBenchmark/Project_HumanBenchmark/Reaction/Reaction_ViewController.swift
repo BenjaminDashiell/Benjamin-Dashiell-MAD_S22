@@ -27,9 +27,12 @@ class Reaction_ViewController: UIViewController {
     
     let timerInstance = timerClass()
     let accessScores = Score.scoreInstance
+    
+    private var workItem: DispatchWorkItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        resetWorkItem()
         initalizeGame()
     }
     
@@ -44,14 +47,25 @@ class Reaction_ViewController: UIViewController {
         return Int(totalMS/5)
     }
     
+    private func cancelWorkItem(){
+        workItem?.cancel()
+    }
+    private func resetWorkItem(){
+        //print("reset WorkItem was called")
+        workItem = DispatchWorkItem{
+            //self.performSegue(withIdentifier: "delayStartTimer", sender: self)
+            self.currentState = .startTimer
+            self.stateSwitch(self.currentState!)
+        }
+    }
+    
     private func startRound(){
         stateSwitch(currentState!)
         let randomSecs = Int.random(in: 3..<10) //1-2 secs was too fast
         let dispatchAfter = DispatchTimeInterval.seconds(randomSecs)
-        DispatchQueue.main.asyncAfter(deadline: .now() + dispatchAfter) {
-            self.currentState = .startTimer
-            self.stateSwitch(self.currentState!)
-        }
+        //print("random secs amount: ", randomSecs)
+        //print("asyncAfter is about to run")
+        DispatchQueue.main.asyncAfter(deadline: .now() + dispatchAfter, execute: workItem!)
     }
     
     @IBAction func detectUserTap(_ sender: UITapGestureRecognizer) {
@@ -62,14 +76,17 @@ class Reaction_ViewController: UIViewController {
         //user tapped screen while in wait state
         if currentState! == .wait{
             //go to invalidTap state
+            cancelWorkItem()
             currentState = .invalidTap
             stateSwitch(currentState!)
         }
         //user tapped screen during invalidTap state
         else if currentState! == .invalidTap{
             //go to wait state
+            resetWorkItem()
             currentState = .wait
             stateSwitch(currentState!)
+            startRound()
         }
         //user tapped screen during stopTimer state
         else if currentState! == .stopTimer{

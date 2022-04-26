@@ -28,7 +28,7 @@ class timerClass{
         msCount = msCount+0.001
     }
     func getMSTime()-> Int{
-        print("Time returned is \(msCount), \(msCount*1000)")
+        //print("Time returned is \(msCount), \(msCount*1000)")
         return Int(msCount*1000)
     }
     

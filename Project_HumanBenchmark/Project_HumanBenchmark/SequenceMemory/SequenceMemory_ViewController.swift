@@ -70,8 +70,8 @@ class SequenceMemory_ViewController: UIViewController {
     }
     
     private func recurPlaySequence(_ ind: Int){
-        print("sequence amount: ", pattern.count)
-        print("current index:", ind)
+        //print("sequence amount: ", pattern.count)
+        //print("current index:", ind)
         guard ind < pattern.count else{
             currentButtonState = .active
             buttonEnabled(true)
@@ -81,15 +81,15 @@ class SequenceMemory_ViewController: UIViewController {
         
         //If error was not found, which is accessing an index outside an array, show the pattern and recursive call
         buttonTintToChange = buttonFromIndexID(pattern[ind])
-        print("color will change to white")
+        //print("color will change to white")
         buttonTintToChange!.backgroundColor = .white
         
         //change
         let dispatchAfter = DispatchTimeInterval.seconds(2) //2 secs before changing the color of the current
         DispatchQueue.main.asyncAfter(deadline: .now() + dispatchAfter){
-            print("color will change to blue")
+            //print("color will change to blue")
             self.buttonTintToChange!.backgroundColor = .systemBlue
-            print("current_index in Dispatch", self.current_index)
+            //print("current_index in Dispatch", self.current_index)
             self.current_index+=1
             self.recurPlaySequence(self.current_index)
         }
@@ -99,8 +99,8 @@ class SequenceMemory_ViewController: UIViewController {
         //only allow userSelection code to run if in .active state
         if(currentButtonState == .active){
             let tagID = sender.tag
-            print("Tag: ", tagID)
-            print("Compare", pattern[current_index])
+            //print("Tag: ", tagID)
+            //print("Compare", pattern[current_index])
             if tagID == pattern[current_index]{
                 //print("User has selected the right button")
                 if current_index != pattern.count-1{
